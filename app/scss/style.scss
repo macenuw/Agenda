@@ -28,6 +28,10 @@
         font-size: 20px;
         color: white;
         text-transform: uppercase;
+
+        &:hover {
+            color: $accent;
+        }
     }
 
 }
@@ -192,7 +196,7 @@
     border-right: 1px solid white;
     background-repeat: no-repeat;
     background-position-y: 15px;
-    background-position-x: 215px;
+    background-position-x: 32%;
     position: relative;
     min-height: 115px;
 
@@ -232,6 +236,8 @@
         font-size: 25px;
         @extend %bison;
         color: $accent;
+        display: block;
+        margin-bottom: 10px;
     }
 
     &__name {
@@ -286,5 +292,6 @@
         width: 145px;
         height: 40px;
         text-transform: uppercase;
+        margin-left: 15px;
     }
 }
