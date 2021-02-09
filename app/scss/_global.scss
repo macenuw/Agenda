@@ -1,0 +1,27 @@
+body {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-color: $black;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: 'Jost', sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &--box {
+        max-width: 1160px;
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}

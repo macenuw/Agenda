@@ -1,0 +1,290 @@
+@import'./reset';
+@import'./vars';
+@import'./fonts';
+@import'./global';
+
+.header {
+    background-color: $black;
+    margin-bottom: 47px;
+
+    &__menu {
+        width: 100%;
+        min-height: 100px;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.menu {
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 64px;
+        }
+    }
+
+    &__link {
+        @extend %bison;
+        font-size: 20px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+}
+
+.top-section {
+    background-image: url(../images/stat.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding: 20px 0 0;
+
+    &__title {
+        @extend %bison;
+        color: $accent;
+        font-size: 70px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+        max-width: 600px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        max-width: 400px;
+        color: white;
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    &__sub-info {
+        @extend %bison;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: block;
+        opacity: 0.5;
+
+        &--opacity {
+            opacity: 0.5;
+        }
+    }
+
+    &__sub-text {
+        color: $accent;
+
+    }
+
+    &__link {
+        @extend %bison;
+        display: block;
+        background-color: white;
+        width: 360px;
+        text-align: center;
+        color: $black;
+        padding: 8px 0;
+        font-size: 40px;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+    }
+
+    &__sub-title {
+        @extend %bison;
+        background-color: $black;
+        width: 100%;
+        border: 1px solid $accent;
+        color: $accent;
+        text-align: center;
+        font-size: 65px;
+    }
+}
+
+.agenda {
+    padding: 150px 0 75px;
+    position: relative;
+
+    &__title {
+        text-align: center;
+        font-size: 120px;
+        color: $accent;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__subtitle {
+        @extend %bison;
+        font-size: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &__text {
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        width: 100%;
+        font-size: 22px;
+        text-align: center;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        padding: 15px 0;
+    }
+
+    &__item--active {
+        background-color: $accent;
+        color: $black;
+        font-weight: bold;
+    }
+
+    &__nfr {
+        position: absolute;
+        background-color: $accent;
+        color: $black;
+        padding: 8px;
+        text-align: center;
+        font-size: 35px;
+        font-weight: 900;
+        top: 879px;
+        left: 26px;
+        right: 25px;
+    }
+}
+
+.tracker {
+    margin: 0 10px;
+    width: 100%;
+    padding-top: 70px;
+
+    &__title {
+        text-align: center;
+        font-size: 80px;
+        font-weight: 900;
+        margin-bottom: 20px;
+
+        &--accent {
+            color: $accent;
+        }
+    }
+
+    &__sub-title {
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        max-width: 638px;
+        display: block;
+        margin: auto;
+        margin-bottom: 90px;
+        min-height: 110px;
+    }
+}
+
+.slot {
+    padding-top: 10px;
+    width: 100%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-repeat: no-repeat;
+    background-position-y: 15px;
+    background-position-x: 215px;
+    position: relative;
+    min-height: 115px;
+
+    &--last {
+        padding-top: 25px;
+        border-bottom: 1px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+
+    &--pro {
+        border-color: $accent;
+    }
+
+    &::before {
+        content: "";
+        width: 90%;
+        height: 1px;
+        background-color: white;
+        opacity: 0.2;
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+    }
+
+    &__info {
+        padding: 15px 30px;
+    }
+
+    &__details {
+        width: 100%;
+        max-width: 440px;
+        margin: auto 0;
+    }
+
+    &__time {
+        font-size: 25px;
+        @extend %bison;
+        color: $accent;
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+    }
+
+    &__text {
+        font-size: 20px;
+        max-width: 340px;
+        margin-right: auto;
+    }
+
+    &__buttons {
+        padding: 15px 30px;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    &__company {
+        width: 100%;
+        max-width: 425px;
+    }
+
+    &__btn {
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__show {
+        border: 2px solid $accent;
+        background-color: $accent;
+        color: $black;
+        font-size: 20px;
+        @extend %bison;
+        padding: 8px 15px;
+        width: 145px;
+        height: 40px;
+        text-transform: uppercase;
+        margin: auto;
+    }
+
+    &__add {
+        border: 2px solid white;
+        background-color: $black;
+        color: white;
+        font-size: 20px;
+        @extend %bison;
+        padding: 8px 15px;
+        width: 145px;
+        height: 40px;
+        text-transform: uppercase;
+    }
+}
